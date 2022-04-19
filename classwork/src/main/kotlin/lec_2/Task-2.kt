@@ -10,13 +10,17 @@ fun main() {
     val s = readLine()
     val t = readLine()
 
+    findAddedLetter(s!!, t!!)
+}
+
+fun findAddedLetter(s: String, t:String) {
     val lettersInS = mutableSetOf<Char>()
 
-    for (l in s!!.toCharArray()){
+    for (l in s.toCharArray()){
         lettersInS.add(l)
     }
 
-    for (l in t!!.toCharArray()){
+    for (l in t.toCharArray()){
         if(!lettersInS.contains(l)){
             println("\'$l\' is the letter that was added.")
         }
